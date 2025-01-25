@@ -7,7 +7,7 @@ export default function HomeCard() {
 
   const [Data, setData] = useState([])
   const getData = async () => {
-    const response = await fetch('http://localhost:4000/api/v1/products')
+    const response = await fetch('https://mern-e-com-k2te.onrender.com/api/v1/products')
     const data = await response.json()
     setData(data.prods)
     // console.log(data.prods)
