@@ -9,7 +9,7 @@ const ProductCard = () => {
     const [image, setImage] = useState("")
     const [rating, setRating] = useState("4.9")
     const getData = async () => {
-        const response = await fetch(`http://localhost:4000/api/v1/products?keyword=${name.phone_name}`)
+        const response = await fetch(`https://mern-e-com-k2te.onrender.com/api/v1/products?keyword=${name.phone_name}`)
         const data = await response.json()
         setData(data.prods[0])
         setImage(data.prods[0].images[0].url)
