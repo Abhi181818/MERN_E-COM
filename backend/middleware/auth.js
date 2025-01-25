@@ -7,7 +7,7 @@ exports.isAuthUser = async (req, res, next) => {
     if (!token) {
         res.status(401).json("Please login!!!")
     }
-    const decoded = JWT.verify(token, 1234567)
+    const decoded = JWT.verify(token, "1234")
     req.user = await User.findById(decoded._id)
     next();
 }
