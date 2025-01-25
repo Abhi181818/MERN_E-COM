@@ -143,7 +143,7 @@ export default function Navigation() {
         
     const logOut = async () => {
         // <Toaster position='top-center' />
-        await axios.get("http://localhost:4000/api/v1/logout")
+        await axios.get("https://mern-e-com-k2te.onrender.com/api/v1/logout")
             .then((response) => {
                 toast("Logged Out")
                 // alert("Logged out")
@@ -161,7 +161,7 @@ export default function Navigation() {
     // const { loginState } = useContext(UserContext)
     const [Data, setData] = useState([])
     const getData = async () => {
-        const response = await fetch('http://localhost:4000/api/v1/products')
+        const response = await fetch('https://mern-e-com-k2te.onrender.com/api/v1/products')
         const data = await response.json()
         setData(data.prods)
         // console.log(state)
